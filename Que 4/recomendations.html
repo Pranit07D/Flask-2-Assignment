@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations based on "{{ item_name }}"</h1>
+    <ul>
+        {% for _, row in recommendations.iterrows() %}
+        <li>{{ row.item_name }}: {{ row.item_features }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Go Back</a>
+</body>
+</html>

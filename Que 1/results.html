@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Results for "{{ query }}"</h1>
+    
+    <h2>YouTube Videos</h2>
+    <ul>
+        {% for video in youtube_results %}
+        <li>{{ video }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Amazon Products</h2>
+    <ul>
+        {% for product in amazon_results %}
+        <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/">Go Back</a>
+</body>
+</html>
